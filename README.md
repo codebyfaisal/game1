@@ -4,7 +4,7 @@ This project is a simple implementation of the classic Tic Tac Toe game using HT
 
 ## Preview
 
-![Tic Tac Toe Game Preview](images/preview.png)
+![Tic Tac Toe Game Preview](preview.png)
 
 ## Play Game
 
