@@ -23,20 +23,32 @@ body {
 .players {
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
-  width: 80%;
-  padding: 2vmin;
+  justify-content: space-between;
+  align-items: center;
+  width: 58vmin;
+  font-size: 2vmin;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 138, 138, 0.8),
+    rgba(146, 0, 209, 0.8)
+  );
+  border-radius: 5px 5px 0 0;
 
   & .player {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    padding: 1vmin;
+    color: white;
+  }
+
+  & .turn-arrow {
+    font-size: 3rem;
+    color: white;
   }
 }
 
 .container {
   margin: 0 auto;
-  width: 70vh;
   width: 60vmin;
   display: flex;
   justify-content: center;
@@ -74,32 +86,38 @@ body {
 .box {
   height: 18vmin;
   width: 18vmin;
-  border-radius: 0.4rem;
+  border-radius: 5px;
   box-shadow: 0 0 20px 0 #9eb8d9;
   font-size: 8vmin;
   background-color: rgba(255, 255, 255, 0.438);
 }
 
-.game-btn {
-  background-color: black;
-  color: white;
-  font-size: 2.2vmin;
-  letter-spacing: 1px;
-  padding: 2vmin;
-  border-radius: 0.1rem;
+.buttons {
+  margin: 0 auto;
+  width: 60vmin;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .game-btn {
+    background-color: black;
+    color: white;
+    font-size: 2.2vmin;
+    letter-spacing: 1px;
+    padding: 2vmin;
+    border-radius: 0.1rem;
+  }
 }
 
 #start-btn {
-  animation: start-btn 1.5s infinite ease-in-out alternate;
+  animation: start-btn 1.5s infinite ease-in-out alternate-reverse;
 }
 
 @keyframes start-btn {
   from {
-    background-color: rgb(9, 126, 126);
-    border-radius: 8px 0;
+    background-color: darkcyan;
   }
   to {
-    background-color: rgb(13, 103, 187);
-    border-radius: 0 8px;
+    background-color: darkviolet;
   }
 }
