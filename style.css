@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(197, 221, 223);
+  font-family: urbanist;
+
+  & button {
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.game-name {
+  padding: 1rem 0 2rem;
+}
+.players {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  padding: 2vmin;
+
+  & .player {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 70vh;
+  width: 60vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2rem;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1vmin 2vmin;
+  position: relative;
+
+  & .game-starter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192, 191, 191, 0.1);
+    display: block;
+  }
+
+  & #winner {
+    position: absolute;
+    font-size: 0.1vmin;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 20px 0 #9eb8d9;
+  font-size: 8vmin;
+  background-color: rgba(255, 255, 255, 0.438);
+}
+
+.game-btn {
+  background-color: black;
+  color: white;
+  font-size: 2.2vmin;
+  letter-spacing: 1px;
+  padding: 2vmin;
+  border-radius: 0.1rem;
+}
+
+#start-btn {
+  animation: start-btn 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes start-btn {
+  from {
+    background-color: rgb(9, 126, 126);
+    border-radius: 8px 0;
+  }
+  to {
+    background-color: rgb(13, 103, 187);
+    border-radius: 0 8px;
+  }
+}
