@@ -6,6 +6,10 @@ This project is a simple implementation of the classic Tic Tac Toe game using HT
 
 ![Tic Tac Toe Game Preview](images/preview.png)
 
+## Play Game
+
+<a href="https://codebyfaisal.github.io/game1.github.io/" target="_blank">Project Preview</a>
+
 ## How to Play
 
 - Click the "Start Game" button to begin.
