@@ -1,3 +1,4 @@
+/* Fonts import and universal styles */
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
@@ -7,112 +8,215 @@
   text-align: center;
 }
 
+/* Body styles */
 body {
-  background-color: rgb(197, 221, 223);
   font-family: urbanist;
+  height: 100vh;
+  background-color: #1e272e;
+  animation: aurora 5s infinite alternate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-  & button {
+  /* Button styles within body */
+  button {
     border: none;
     cursor: pointer;
   }
 }
 
-.game-name {
-  padding: 1rem 0 2rem;
+/* Main and Game styles */
+main {
+  display: grid;
+  gap: 1vmin;
 }
+
+.game-name {
+  font-size: 7vmin;
+  padding: 1rem 0 2rem;
+  color: #ffffff;
+}
+
+/* Player styles */
 .players {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 58vmin;
-  font-size: 2vmin;
-  background-image: linear-gradient(
-    to left,
-    rgba(0, 138, 138, 0.8),
-    rgba(146, 0, 209, 0.8)
-  );
-  border-radius: 5px 5px 0 0;
+  height: 11vmin;
+  font-size: 2.1vmin;
+  background: linear-gradient(to right, rgb(42, 66, 77), rgb(48, 39, 56));
+  box-shadow: -3px -3px 15px 3px rgba(3, 97, 97, 0.3),
+    1px 1px 8px 4px rgba(138, 0, 138, 0.3);
 
-  & .player {
+  /* Nested player and arrow styles */
+  .player {
     display: flex;
     flex-direction: column;
     padding: 1vmin;
     color: white;
   }
 
-  & .turn-arrow {
-    font-size: 3rem;
+  .turn-arrow {
+    font-size: 6vmin;
     color: white;
   }
 }
 
+/* Container and Winner styles */
 .container {
   margin: 0 auto;
   width: 60vmin;
+  height: 100%;
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 0 2rem;
+  position: relative;
 }
 
+#winner {
+  position: absolute;
+  width: max-content;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  font-size: 0.001vmin;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Game and Game Starter styles */
 .game {
-  height: 60vmin;
-  width: 60vmin;
+  width: 58vmin;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1vmin 2vmin;
-  position: relative;
+  gap: 1vmin;
 
-  & .game-starter {
+  .game-starter {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 3%;
+    width: 94%;
     height: 100%;
     background-color: rgba(192, 191, 191, 0.1);
     display: block;
   }
-
-  & #winner {
-    position: absolute;
-    font-size: 0.1vmin;
-    transition: all 0.3s ease-in-out;
-  }
 }
 
+/* Box styles */
 .box {
   height: 18vmin;
   width: 18vmin;
-  border-radius: 5px;
-  box-shadow: 0 0 20px 0 #9eb8d9;
+  box-shadow: 0 0 10px 2px rgb(83, 101, 112);
   font-size: 8vmin;
-  background-color: rgba(255, 255, 255, 0.438);
+  background-color: #141c20;
 }
 
+/* Buttons styles */
 .buttons {
-  margin: 0 auto;
-  width: 60vmin;
+  margin: 1vmin auto 0;
+  width: 59vmin;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  z-index: 1;
 
+  /* Game button styles */
   .game-btn {
-    background-color: black;
-    color: white;
+    width: 18vmin;
+    color: rgb(219, 219, 219);
     font-size: 2.2vmin;
     letter-spacing: 1px;
-    padding: 2vmin;
-    border-radius: 0.1rem;
+    padding: 1vmin 2vmin;
+    border-radius: 4vmin;
+    background-color: #1e272e;
+    box-shadow: inset 2px 2px 5px 1px rgb(0, 140, 255),
+      -2px -2px 5px 1px rgb(0, 140, 255);
+    transition: 1s;
+
+    /* Button hover effect */
+    &:hover {
+      color: white;
+      box-shadow: -2px -2px 5px 1px rgb(0, 140, 255),
+        inset -2px -2px 5px 1px rgb(119, 0, 255);
+
+      & span {
+        display: block;
+        transform: translate(-2px, -2px);
+        transition: 0.2s;
+      }
+    }
   }
 }
 
+/* Start button animation */
 #start-btn {
   animation: start-btn 1.5s infinite ease-in-out alternate-reverse;
 }
 
+/* Media queries */
+@media (max-width: 600px) {
+  .game-name {
+    font-size: 10vmin;
+  }
+
+  .players {
+    width: 79vmin;
+    font-size: 2.8vmin;
+  }
+
+  .container {
+    width: 90vmin;
+  }
+
+  .game {
+    width: 90vmin;
+    gap: 2vmin;
+  }
+
+  .box {
+    width: 25vmin;
+    height: 25vmin;
+  }
+
+  .buttons {
+    margin-top: 2vmin;
+    width: 79vmin;
+
+    .game-btn {
+      font-size: 3.2vmin;
+      width: 24vmin;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .game-name {
+    position: absolute;
+    top: 0;
+  }
+}
+
+/* Keyframes for aurora animation */
+@keyframes aurora {
+  0% {
+    background-color: #1e272e;
+  }
+  50% {
+    background-color: #29343a; /* Midnight blue */
+  }
+  100% {
+    background-color: #1e272e;
+  }
+}
+
+/* Keyframes for start button animation */
 @keyframes start-btn {
   from {
     background-color: darkcyan;

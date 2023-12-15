@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1 class="game-name">Tic Tac Toe Game</h1>
     <main>
-      <h1 class="game-name">Tic Tac Toe Game</h1>
       <div class="players">
         <div class="player player-x">
           <h2>Player 1: X</h2>
@@ -22,9 +22,9 @@
       </div>
 
       <div class="container">
+        <h1 id="winner"></h1>
         <div class="game">
           <div class="game-starter"></div>
-          <h1 id="winner"></h1>
           <button class="box"></button>
           <button class="box"></button>
           <button class="box"></button>
@@ -37,11 +37,17 @@
         </div>
       </div>
       <div class="buttons">
-        <button id="start-btn" class="game-btn">Start Game</button>
-        <button id="reset-btn" class="game-btn">Reset Game</button>
-        <button id="restart-btn" class="game-btn">Restart Game</button>
+        <button id="start-btn" class="game-btn">
+          <span>Start Game</span>
+        </button>
+        <button id="reset-btn" class="game-btn">
+          <span>Reset Game</span>
+        </button>
+        <button id="restart-btn" class="game-btn">
+          <span>Restart Game</span>
+        </button>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
