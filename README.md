@@ -8,7 +8,7 @@ This project is a simple implementation of the classic Tic Tac Toe game using HT
 
 ## Play Game
 
-<a href="https://codebyfaisal.github.io/game1.github.io/" target="_blank">Project Preview</a>
+<a href="https://codebyfaisal.github.io/game1/" target="_blank">Project Preview</a>
 
 ## How to Play
 
